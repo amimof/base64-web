@@ -7,6 +7,7 @@
   "private": false,
   "main": "server.js",
   "scripts": {
+    "postinstall": "node node_modules/bower/bin/bower install --allow-root",
     "start": "node server.js"
   },
   "repository": {
@@ -16,11 +17,18 @@
   "dependencies": {
     "bluebird": "^3.4.6",
     "body-parser": "~1.12.4",
+    "bower": "^1.8.0",
     "express": "^4.12.4",
     "express-session": "~1.11.2",
     "lodash": "^3.10.1",
     "moment": "~2.10.3",
     "request": "~2.58.0",
+    "serve-static": "^1.11.1",
     "winston": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-preprocess": "^5.1.0",
+    "nodemon": "^1.11.0"
   }
 }

@@ -1,6 +1,8 @@
 var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
+var path = require('path');
+var static = require('serve-static')
 
 module.exports = function() {
 	var app = express();
@@ -32,6 +34,10 @@ module.exports = function() {
 
 	// Register our routes
 	app.use('/api', router);
+
+	// Serve static content
+	app.use('/', static(path.join(__dirname, '../../public'), {'index': ['index.html']}));
+	app.use('/bower_components', static(path.join(__dirname, '../../bower_components')));
 
 	return app;
 

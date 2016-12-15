@@ -1,0 +1,69 @@
+<!-- Secondary menu and header -->
+<div class="ui secondary  menu">
+  <div class="header item">
+    {{ Page.options.title }}
+  </div>
+</div>
+
+<div class="ui segment" style="bottom: 0px">
+  
+  <div class="ui grid">
+    <div class="eight wide column">
+      <div class="ui fluid selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">utf8</div>
+        <div class="menu">
+          <div class="item" data-value="0">ascii</div>
+          <div class="item" data-value="1">utf8</div>
+          <div class="item" data-value="2">utf16le</div>
+          <div class="item" data-value="3">ucs2</div>
+          <div class="item" data-value="4">base64</div>
+          <div class="item" data-value="5">latin1</div>
+          <div class="item" data-value="6">binary</div>
+          <div class="item" data-value="7">hex</div>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="ui fluid selection dropdown">
+        <input type="hidden" name="gender">
+        <i class="dropdown icon"></i>
+        <div class="default text">base64</div>
+        <div class="menu">
+          <div class="item" data-value="0">ascii</div>
+          <div class="item" data-value="1">utf8</div>
+          <div class="item" data-value="2">utf16le</div>
+          <div class="item" data-value="3">ucs2</div>
+          <div class="item" data-value="4">base64</div>
+          <div class="item" data-value="5">latin1</div>
+          <div class="item" data-value="6">binary</div>
+          <div class="item" data-value="7">hex</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui grid">
+    <div class="eight wide column">
+      <div class="ui form">
+        <div class="field">
+          <textarea class="code" rows="15" ng-model="left.message" ng-change="leftChanged()" msd-elastic spellcheck="false"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide column">
+      <div class="ui form">
+        <div class="field">
+          <textarea class="code" rows="15" ng-model="right.message" ng-change="rightChanged()" msd-elastic spellcheck="false"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
