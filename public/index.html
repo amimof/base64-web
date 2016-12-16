@@ -22,9 +22,9 @@
   <![endif]-->
   <div class="ui attached stackable menu">
     <div class="ui container">
-      <span class="item">
+      <a href="#/" class="item">
         Base64
-      </span>
+      </a>
       <a href="#/help" class="right item">
         <i class="help icon"></i> Help
       </a>
@@ -41,7 +41,7 @@
       </p></div>
       <div ng-view></div>
       <div class="ui right aligned basic segment">
-        App Version 1.0b {{ appVersion }}
+        Version 1.0b {{ appVersion }}
     </div>
   </div>
 
@@ -53,8 +53,9 @@
   <script type="text/javascript" src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../bower_components/ace-builds/src-min-noconflict/ace.js"></script>
   <script type="text/javascript" src="../bower_components/angular-ui-ace/ui-ace.min.js"></script>
-  <script src="../bower_components/angular-base64/angular-base64.js"></script>
-  <script src="../bower_components/angular-elastic/elastic.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-base64/angular-base64.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-elastic/elastic.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-clipboard/angular-clipboard.js"></script>
   <!-- App -->
   <script src="app.js"></script>
     <!-- Services -->

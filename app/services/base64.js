@@ -49,7 +49,7 @@ module.exports.decode = function(str, enc) {
 		if(!isEncSupported(encoding)) {
 			reject({'error': '\''+encoding+'\' is not a supported encoding.'});
 		} else {
-			resolve(Buffer.from(str, encoding).toString('utf8'))
+			resolve(Buffer.from(str, 'base64').toString(encoding))
 		}
 	});
 }

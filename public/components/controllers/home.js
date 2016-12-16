@@ -13,12 +13,22 @@ angular.module('myApp').controller('HomeController', ['$scope', 'Page', 'Config'
   }
 
   $scope.leftChanged = function() {
-    $scope.right.message = $base64.encode($scope.left.message);
+    $scope.right.message = $base64.encode(unescape(encodeURIComponent($scope.left.message)));
+  };
+
+  $scope.clearLeft = function() {
+    $scope.left.message = "";
+    $scope.leftChanged();
   };
 
   $scope.rightChanged = function() {
     $scope.left.message = $base64.decode($scope.right.message);
   };
+
+  $scope.clearRight = function() {
+    $scope.right.message = "";
+    $scope.rightChanged();
+  }
              
   $('.ui.dropdown').dropdown();  
 

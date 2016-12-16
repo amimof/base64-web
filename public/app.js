@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ui.ace',
   'ngRoute',
   'base64',
-  'monospaced.elastic'
+  'monospaced.elastic',
+  'angular-clipboard',
 ]).
 run(['$rootScope', 'Page', function($rootScope, Page) {
   $rootScope.$on( "$routeChangeStart", function(event, next, current) {

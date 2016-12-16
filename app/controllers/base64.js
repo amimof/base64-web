@@ -20,7 +20,7 @@ exports.encodePostData = function(req, res) {
 		res.json({
 			input: req.body.data,
 			output: d,
-			encoding: req.query.encoding,
+			encoding: Base64.getEncoding(req.query.encoding),
 			timestamp: moment()
 		});
 	}).catch(function(error) {
@@ -29,11 +29,27 @@ exports.encodePostData = function(req, res) {
 }
 
 exports.decodeParamData = function(req, res) {
-	var data = new Model(req.params.data);
-	res.json(data.decode());
+	Base64.decode(req.params.data, req.query.encoding).then(function(d) {
+		res.json({
+			input: req.params.data,
+			output: d,
+			encoding: Base64.getEncoding(req.query.encoding),
+			timestamp: moment()
+		});
+	}).catch(function(error) {
+		res.status(500).send(error);
+	});
 };
 
 exports.decodePostData = function(req, res) {
-	var data = new Model(req.body.data);
-	res.json(data.decode());
+	Base64.decode(req.body.data, req.query.encoding).then(function(d) {
+		res.json({
+			input: req.body.data,
+			output: d,
+			encoding: Base64.getEncoding(req.query.encoding),
+			timestamp: moment()
+		});
+	}).catch(function(error) {
+		res.status(500).send(error);
+	});
 }

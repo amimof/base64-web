@@ -5,65 +5,57 @@
   </div>
 </div>
 
-<div class="ui segment" style="bottom: 0px">
   
-  <div class="ui grid">
-    <div class="eight wide column">
-      <div class="ui fluid selection dropdown">
-        <input type="hidden" name="gender">
-        <i class="dropdown icon"></i>
-        <div class="default text">utf8</div>
-        <div class="menu">
-          <div class="item" data-value="0">ascii</div>
-          <div class="item" data-value="1">utf8</div>
-          <div class="item" data-value="2">utf16le</div>
-          <div class="item" data-value="3">ucs2</div>
-          <div class="item" data-value="4">base64</div>
-          <div class="item" data-value="5">latin1</div>
-          <div class="item" data-value="6">binary</div>
-          <div class="item" data-value="7">hex</div>
-        </div>
-      </div>
-    </div>
-    <div class="eight wide column">
-      <div class="ui fluid selection dropdown">
-        <input type="hidden" name="gender">
-        <i class="dropdown icon"></i>
-        <div class="default text">base64</div>
-        <div class="menu">
-          <div class="item" data-value="0">ascii</div>
-          <div class="item" data-value="1">utf8</div>
-          <div class="item" data-value="2">utf16le</div>
-          <div class="item" data-value="3">ucs2</div>
-          <div class="item" data-value="4">base64</div>
-          <div class="item" data-value="5">latin1</div>
-          <div class="item" data-value="6">binary</div>
-          <div class="item" data-value="7">hex</div>
-        </div>
-      </div>
-    </div>
+  <div class="ui two column grid">
 
+    <div class="column">
+      <div class="ui top attached mini menu">
+        <div class="ui container">
+          <span class="active item">
+            Plain Text
+          </span>
+          <div class="right menu">
+            <a href="#" class="right item" clipboard text="left.message" data-content="Add users to your feed">
+              <i class="copy icon"></i>
+            </a>
+            <a href="#" class="item" ng-click="clearLeft()">
+              <i class="remove icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui bottom attached segment">
+        <div class="ui fluid form">
+          <div class="field">
+            <textarea class="code" rows="15" ng-model="left.message" ng-change="leftChanged()" msd-elastic spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column">
+      <div class="ui top attached mini menu">
+        <div class="ui container">
+          <span class="active item">
+            Encoded
+          </span>
+          <div class="right menu">
+            <a href="#" class="right item" clipboard text="left.message">
+              <i class="copy icon"></i>
+            </a>
+            <a href="#" class="item" ng-click="clearRight()">
+              <i class="remove icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui bottom attached segment">
+        <div class="ui fluid form">
+          <div class="field">
+            <textarea class="code" rows="15" ng-model="right.message" ng-change="rightChanged()" msd-elastic spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="ui grid">
-    <div class="eight wide column">
-      <div class="ui form">
-        <div class="field">
-          <textarea class="code" rows="15" ng-model="left.message" ng-change="leftChanged()" msd-elastic spellcheck="false"></textarea>
-        </div>
-      </div>
-    </div>
-    <div class="eight wide column">
-      <div class="ui form">
-        <div class="field">
-          <textarea class="code" rows="15" ng-model="right.message" ng-change="rightChanged()" msd-elastic spellcheck="false"></textarea>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-</div>

@@ -1,12 +1,15 @@
 /* app css stylesheet */
 .ace_editor { height: 200px; }
 
+
+
 .code {
 	font-family: Consolas, monaco, monospace;
-	font-size: 13px;
+	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 18.5714px;
-   min-height:10px;
+	
 }
+

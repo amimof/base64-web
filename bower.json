@@ -14,6 +14,7 @@
     "angular-ui-ace": "bower",
     "semantic": "^2.2.6",
     "angular-base64": "^2.0.5",
-    "angular-elastic": "^2.5.1"
+    "angular-elastic": "^2.5.1",
+    "angular-clipboard": "^1.5.0"
   }
 }
