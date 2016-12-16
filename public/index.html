@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Base64</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../bower_components/semantic/dist/semantic.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body ng-controller="MainController">
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="ui attached stackable menu">
+    <div class="ui container">
+      <a href="#/" class="item">
+        Base64
+      </a>
+      <a href="#/help" class="right item">
+        <i class="help icon"></i> Help
+      </a>
+    </div>
+  </div>
+  <div class="ui one column doubling stackable grid container">
+    <div class="column">
+      <p></p>
+<!--       <div class="ui negative message" ng-show="Page.error">
+        <div class="header">
+          {{ Page.error_header || 'Oh no! Something terrible happened :(' }}
+        </div>
+        <p> {{ Page.error }}
+      </p></div> -->
+      <div ng-view></div>
+      <div class="ui right aligned basic segment">
+        Version 1.0 {{ appVersion }}
+    </div>
+  </div>
+
+  <!-- Libraries -->
+  <script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../bower_components/semantic/dist/semantic.min.js"></script>
+  <script type="text/javascript" src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../bower_components/ace-builds/src-min-noconflict/ace.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-ui-ace/ui-ace.min.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-base64/angular-base64.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-elastic/elastic.js"></script>
+  <script type="text/javascript" src="../bower_components/angular-clipboard/angular-clipboard.js"></script>
+  <!-- App -->
+  <script src="app.js"></script>
+    <!-- Services -->
+    <script src="components/services/page.js"></script>
+    <!-- Directives -->
+    <script src="components/directives/app-loader.js"></script>
+    <!-- Controllers -->
+    <script src="components/controllers/home.js"></script>
+    <script src="components/controllers/help.js"></script>
+</body>
+</html>
