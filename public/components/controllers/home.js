@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('myApp').controller('HomeController', ['$scope', 'Page', 'Config', '$base64', function($scope, Page, Config, $base64) {
+angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64', function($scope, Page, $base64) {
 
   Page.options.title = "Encode & Decode"
 
   $scope.left = {
-    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam eleifend luctus. In hac habitasse platea dictumst. Mauris at placerat dui. Aenean facilisis at diam vel sodales. Quisque vestibulum vehicula enim, at aliquam sapien posuere eu. Aenean faucibus mi et risus tincidunt faucibus. Quisque scelerisque libero dolor, at euismod nisi imperdiet eu. Ut at efficitur leo."
+    message: null
   };
 
   $scope.right = {

@@ -112,4 +112,25 @@
 }</pre>
 	</div>	
 
+
+	<h3 class="ui header">Using character encodings</h3>
+	<div class="ui divider"></div>
+	<p>
+		The API supports setting input character encoding when encoding and output character encoding when decoding. Use the `encoding` query param in the URL whenever you want to use another encoding other than the default `utf8`. Supported encodings are:
+	</p>
+	<ul>
+		<li>ascii</li>
+		<li>utf8</li>
+		<li>utf16le</li>
+		<li>ucs2</li>
+		<li>base64</li>
+		<li>latin1</li>
+		<li>binary</li>
+		<li>hex</li>
+	</ul>
+
+	<p>
+		Example: <div class="code">GET /api/base64/encode/helloworld?encoding=ascii</div>
+	</p>
+
 </div>
