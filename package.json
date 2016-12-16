@@ -27,8 +27,6 @@
     "winston": "^1.0.2"
   },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-preprocess": "^5.1.0",
     "nodemon": "^1.11.0"
   }
 }

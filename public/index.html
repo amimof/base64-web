@@ -33,15 +33,15 @@
   <div class="ui one column doubling stackable grid container">
     <div class="column">
       <p></p>
-      <div class="ui negative message" ng-show="Page.error">
+<!--       <div class="ui negative message" ng-show="Page.error">
         <div class="header">
           {{ Page.error_header || 'Oh no! Something terrible happened :(' }}
         </div>
         <p> {{ Page.error }}
-      </p></div>
+      </p></div> -->
       <div ng-view></div>
       <div class="ui right aligned basic segment">
-        Version 1.0b {{ appVersion }}
+        Version 1.0 {{ appVersion }}
     </div>
   </div>
 
@@ -60,8 +60,6 @@
   <script src="app.js"></script>
     <!-- Services -->
     <script src="components/services/page.js"></script>
-    <!-- Config -->
-    <script src="components/config/config.js"></script>
     <!-- Directives -->
     <script src="components/directives/app-loader.js"></script>
     <!-- Controllers -->
