@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64', function($scope, Page, $base64) {
+angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64', '$location', function($scope, Page, $base64, $location) {
 
   Page.options.title = "Encode & Decode"
 
@@ -29,6 +29,17 @@ angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64
     $scope.right.message = "";
     $scope.rightChanged();
   }
+
+  if(typeof $location.search().decode !== 'undefined') {
+    $scope.right.message = $location.search().decode;
+    $scope.rightChanged();
+  }
+
+  if(typeof $location.search().encode !== 'undefined') {
+    $scope.left.message = $location.search().encode;
+    $scope.leftChanged();
+  }
+
              
   $('.ui.dropdown').dropdown();  
 
