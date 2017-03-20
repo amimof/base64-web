@@ -1,10 +1,5 @@
 /* app css stylesheet */
-.ace_editor { height: 200px; }
-
-
-
-.code {
-	font-family: Consolas, monaco, monospace;
-
+.editor {
+	border: 1px solid #D4D4D5;
 }
 
