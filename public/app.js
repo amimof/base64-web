@@ -64,5 +64,8 @@ config(['$routeProvider', function($routeProvider) {
 
 }]).
 controller('MainController', ['$scope', 'Page', '$http', function($scope, Page, $http) {
+  
   $scope.Page = Page;
+  $scope.appVersion = "1.0.3";
+
 }]);
