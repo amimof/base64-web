@@ -10,8 +10,6 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="../bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" type="text/css" href="../bower_components/semantic/dist/semantic.min.css">
   <link rel="stylesheet" href="app.css">
 </head>
@@ -41,7 +39,7 @@
       </p></div> -->
       <div ng-view></div>
       <div class="ui right aligned basic segment">
-        Version 1.0 {{ appVersion }}
+        Version {{ appVersion }}
     </div>
   </div>
 
@@ -50,18 +48,15 @@
   <script type="text/javascript" src="../bower_components/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="../bower_components/semantic/dist/semantic.min.js"></script>
-  <script type="text/javascript" src="../bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../bower_components/ace-builds/src-min-noconflict/ace.js"></script>
-  <script type="text/javascript" src="../bower_components/angular-ui-ace/ui-ace.min.js"></script>
   <script type="text/javascript" src="../bower_components/angular-base64/angular-base64.js"></script>
-  <script type="text/javascript" src="../bower_components/angular-elastic/elastic.js"></script>
   <script type="text/javascript" src="../bower_components/angular-clipboard/angular-clipboard.js"></script>
+
   <!-- App -->
   <script src="app.js"></script>
     <!-- Services -->
     <script src="components/services/page.js"></script>
     <!-- Directives -->
-    <script src="components/directives/app-loader.js"></script>
     <!-- Controllers -->
     <script src="components/controllers/home.js"></script>
     <script src="components/controllers/help.js"></script>

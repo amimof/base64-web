@@ -10,11 +10,9 @@
     "angular-route": "~1.5.0",
     "angular-loader": "~1.5.0",
     "angular-mocks": "~1.5.0",
-    "html5-boilerplate": "^5.3.0",
-    "angular-ui-ace": "bower",
-    "semantic": "^2.2.6",
+    "angular-clipboard": "^1.5.0",
     "angular-base64": "^2.0.5",
-    "angular-elastic": "^2.5.1",
-    "angular-clipboard": "^1.5.0"
+    "semantic": "^2.2.6",
+    "ace-builds": "^1.2.6"
   }
 }

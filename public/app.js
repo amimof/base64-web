@@ -2,10 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-  'ui.ace',
   'ngRoute',
   'base64',
-  'monospaced.elastic',
   'angular-clipboard',
 ]).
 run(['$rootScope', 'Page', function($rootScope, Page) {
@@ -66,5 +64,8 @@ config(['$routeProvider', function($routeProvider) {
 
 }]).
 controller('MainController', ['$scope', 'Page', '$http', function($scope, Page, $http) {
+  
   $scope.Page = Page;
+  $scope.appVersion = "1.0.3";
+
 }]);
