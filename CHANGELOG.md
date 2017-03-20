@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.3
+* Added Ace Editor with support for multiple syntaxes in the left pane.
+
 ## 1.0.2
 * Added support for sending queryparams to the Angular app and see the encoded and decoded strings directly. Use ?encode=string and ?decode=string. For example `http://localhost:8080/#/?encode=helloworld`
 
