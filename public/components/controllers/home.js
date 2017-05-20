@@ -38,7 +38,8 @@ angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64
   rightEditor.getSession().setMode("text");
   rightEditor.$blockScrolling = 'Infinity';
   rightEditor.session.setUseWrapMode(true);
-  rightEditor.renderer.setShowGutter(false);
+  rightEditor.session.setOption('indentedSoftWrap', false);
+  rightEditor.renderer.setShowGutter(true);
   rightEditor.setShowPrintMargin(false);
   rightEditor.setHighlightActiveLine(false);
   rightEditor.getSession().on('change', function(e) {
@@ -48,6 +49,7 @@ angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64
 
 
   $scope.leftChanged = function() {
+      rightEditor.getSession().clearAnnotations();
       $scope.left.message = leftEditor.getSession().getValue();
       $scope.right.message = $base64.encode(unescape(encodeURIComponent($scope.left.message)));
       $scope.right.silent = true;
@@ -56,8 +58,18 @@ angular.module('myApp').controller('HomeController', ['$scope', 'Page', '$base64
   };
 
   $scope.rightChanged = function() {
+      rightEditor.getSession().clearAnnotations();
       $scope.right.message = rightEditor.getSession().getValue();
-      $scope.left.message = $base64.decode($scope.right.message);
+      try {
+        $scope.left.message = $base64.decode($scope.right.message);  
+      } catch(e) {
+        rightEditor.getSession().setAnnotations([{
+          column: 0,
+          row: 0,
+          text: "Not a valid base64 string",
+          type: "error"
+        }]);
+      }
       $scope.left.silent = true
       leftEditor.getSession().setValue($scope.left.message);
       $scope.left.silent = false;

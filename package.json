@@ -1,6 +1,6 @@
 {
   "name": "node-api-template",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Node.js API Template Application",
   "author": "Amir Mofasser",
   "license": "MIT",
@@ -26,6 +26,7 @@
     "winston": "^1.0.2"
   },
   "devDependencies": {
+    "bower": "^1.8.0",
     "nodemon": "^1.11.0"
   }
 }
