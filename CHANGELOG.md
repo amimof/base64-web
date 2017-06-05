@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.5
+
+## 1.0.4
+* Fixed an issue which caused pasting a base64 strings in the decode pane to duplicate itself and decoding incorrect data.
+* Added an error annotation to the decode pane whenever string is not a valid base64 string
+
 ## 1.0.3
 * Added Ace Editor with support for multiple syntaxes in the left pane.
 
