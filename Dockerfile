@@ -1,6 +1,5 @@
 FROM node:alpine
-MAINTAINER "Amir Mofasser https://github.com/amimof/"
-COPY / ${HOME}
-WORKDIR ${HOME}
+LABEL maintainer="Amir Mofasser https://github.com/amimof/"
+COPY / ./
 RUN	npm install --unsafe-perm=true
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["node", "server.js"]

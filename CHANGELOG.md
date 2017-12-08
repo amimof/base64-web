@@ -1,6 +1,9 @@
 # CHANGELOG
 
 ## 1.0.5
+* Removed bower
+* Removed winston
+* Updated npm packages
 
 ## 1.0.4
 * Fixed an issue which caused pasting a base64 strings in the decode pane to duplicate itself and decoding incorrect data.
