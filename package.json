@@ -1,13 +1,12 @@
 {
-  "name": "node-api-template",
-  "version": "1.0.4",
-  "description": "Node.js API Template Application",
+  "name": "base64-web",
+  "version": "1.0.5",
+  "description": "A fast and easy to use web based base64 encoder/decoder",
   "author": "Amir Mofasser",
   "license": "MIT",
   "private": false,
   "main": "server.js",
   "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install --allow-root",
     "start": "node server.js"
   },
   "repository": {
@@ -15,18 +14,23 @@
     "url": "https://github.com/amimof/node-api-template"
   },
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "body-parser": "~1.12.4",
-    "bower": "^1.8.0",
-    "express": "^4.12.4",
-    "express-session": "~1.11.2",
-    "moment": "~2.10.3",
-    "request": "~2.58.0",
-    "serve-static": "^1.11.1",
-    "winston": "^1.0.2"
+    "ace-builds": "^1.2.9",
+    "angular": "^1.6.7",
+    "angular-base64": "^2.0.5",
+    "angular-clipboard": "^1.6.2",
+    "angular-loader": "^1.6.7",
+    "angular-mocks": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "bluebird": "^3.5.1",
+    "body-parser": "~1.18.2",
+    "express": "^4.16.2",
+    "express-session": "~1.15.6",
+    "moment": "~2.19.3",
+    "request": "~2.83.0",
+    "semantic-ui": "^2.2.13",
+    "serve-static": "^1.13.1"
   },
   "devDependencies": {
-    "bower": "^1.8.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.12.5"
   }
 }

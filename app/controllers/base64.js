@@ -1,5 +1,4 @@
 var moment = require('moment');
-var log = require('../config/log')();
 var Base64 = require('../services/base64');
 
 exports.encodeParamData = function(req, res) {

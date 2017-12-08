@@ -37,7 +37,7 @@ module.exports = function() {
 
 	// Serve static content
 	app.use('/', static(path.join(__dirname, '../../public'), {'index': ['index.html']}));
-	app.use('/bower_components', static(path.join(__dirname, '../../bower_components')));
+	app.use('/node_modules', static(path.join(__dirname, '../../node_modules')));
 
 	return app;
 
