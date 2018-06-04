@@ -7,3 +7,7 @@
 .main {
   flex: 1;
 }
+
+.github-link:hover, .github-link {
+  color: white;
+}
