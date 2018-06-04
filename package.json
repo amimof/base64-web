@@ -1,9 +1,16 @@
 {
   "name": "base64-web",
   "version": "1.1.0",
+  "description": "A fast and easy to use web based base64 encoder/decoder",
+  "author": "Amir Mofasser",
+  "license": "MIT",
   "private": true,
+  "homepage": "http://amimof.github.io/base64",
+  "main": "server.js",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "moment": "^2.22.2",
     "react": "^16.4.0",
     "react-ace": "^6.1.1",
     "react-copy-to-clipboard": "^5.0.1",
@@ -12,9 +19,11 @@
     "semantic-ui-react": "^0.81.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "postinstall": "react-scripts build",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "react-scripts start"
   }
 }

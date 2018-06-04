@@ -74,7 +74,6 @@ class Editor extends Component {
 
   render() {
     const text = this.props.text;
-    const height = this.props.height || '500px';
     const mode = this.state.mode; 
     const ignoreErrors = this.state.ignoreErrors;
     const showGutter = this.state.showGutter;

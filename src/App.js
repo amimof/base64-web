@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home/Home';
-import { Icon } from 'semantic-ui-react';
 
 class App extends Component {
   render() {

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.1.0
+* base64-web is now built using! [React](https://reactjs.org/)
+* Text fields automatically resize
+* Set various editor options using the options-menu
+
 ## 1.0.5
 * Removed bower
 * Removed winston
