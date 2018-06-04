@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu, Popup } from 'semantic-ui-react';
+import { Menu, Popup, TextArea } from 'semantic-ui-react';
 import CopyToClipBoard from 'react-copy-to-clipboard';
 import './Encoder.css';
 
@@ -25,7 +25,6 @@ class Encoder extends Component {
 
   render() {
     const text = this.props.text;
-    const height = this.props.height || "500px";
     return (
       <div className="Encoder">
         <Menu attached="top">
@@ -44,7 +43,7 @@ class Encoder extends Component {
         <div className="ui bottom attached segment">
           <div className="ui fluid form">
             <div className="field">
-              <textarea value={text} height="500px" onChange={this.handleChange}/>
+              <TextArea autoHeight value={text} rows="19" onChange={this.handleChange} className="textarea" />
             </div>
           </div>
         </div>

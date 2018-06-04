@@ -122,7 +122,6 @@ class Editor extends Component {
               <AceEditor
                 className="ace-editor"
                 focus={true}
-                height={height}
                 value={text}
                 mode={mode.toLowerCase()}
                 theme="chrome"
@@ -133,8 +132,7 @@ class Editor extends Component {
                 showGutter={showGutter}
                 enableBasicAutocompletion={true}
                 highlightActiveLine={highlightLine}
-                editorProps={{$blockScrolling: 'Infinity' }}
-                setOptions={{indentedSoftWrap: false, useWorker: !ignoreErrors}} />
+                setOptions={{indentedSoftWrap: false, useWorker: !ignoreErrors, minLines: 21, maxLines: 68}} />
             </div>
           </div>
         </div>

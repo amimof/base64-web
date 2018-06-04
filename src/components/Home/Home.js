@@ -65,7 +65,7 @@ class Home extends Component {
         <div className="ui two column wide height grid">
           {/* Left editor */}
           <div className="ui column">
-            <Editor height="320px" text={lowerText} onChange={this.handleLowerChange} onClear={this.clear} onCopy={this.handleCopy} />
+            <Editor height="330px" text={lowerText} onChange={this.handleLowerChange} onClear={this.clear} onCopy={this.handleCopy} />
           </div>
 
           {/* Right Editor */}
