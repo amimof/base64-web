@@ -18,3 +18,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
+span pre, .short-id {
+  font-family: Menlo,Monaco,Consolas,monospace;
+  font-size: 14px;
+  border-radius: 1px;
+  background-color: #f1f1f1;
+  padding: 2px 4px;
+  color: #666;
+}

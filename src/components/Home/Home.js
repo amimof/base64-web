@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css'
 import Encoder from '../Encoder/Encoder';
 import Editor from '../Editor/Editor';
-import {Message} from 'semantic-ui-react';
+import { Message } from 'semantic-ui-react';
 
 class Home extends Component {
   constructor(props) {

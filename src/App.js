@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Home from './components/Home/Home';
+import Help from './components/Help/Help';
+import { Link, Route, Switch} from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -10,12 +12,12 @@ class App extends Component {
         {/* Toolbar */}
         <div className="ui attached stackable menu">
           <div className="ui container">
-            <a href="#/" className="item">
+            <Link to='/' className="item">
               Base64
-            </a>
-            <a href="#/help" className="right item">
+            </Link>
+            <Link to='/help' className="right item">
               <i className="help icon"></i> Help
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -23,7 +25,10 @@ class App extends Component {
         <div className="ui one column container grid height main">
           <div className="column stretched wide">
             <p></p>
-            <Home />
+            <Switch>
+              <Route exact path='/' component={Home}/>
+              <Route path='/help' component={Help}/>
+            </Switch>
           </div>
         </div>
 
@@ -35,8 +40,8 @@ class App extends Component {
                 <span className="ui inverted">Version 1.1.0</span>
               </div>
               <div className="wide column right floated">
-                <a href="https://github.com/amimof/base64-web" className="github-link" target="_blank">
-                  <i class="github icon"></i>
+                <a href="https://github.com/amimof/base64-web" className="github-link" target="_blank" rel="noopener noreferrer">
+                  <i className="github icon"></i>
                 </a>
               </div>
             </div>
