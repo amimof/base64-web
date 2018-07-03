@@ -18,7 +18,7 @@ npm install
 Running
 ```
 npm start
-Magic is happening on http://0.0.0.0:8080/
+Listening on http://0.0.0.0:8080/
 ```
 
 Now browse to `http://localhost:8080`.

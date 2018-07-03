@@ -4,8 +4,6 @@
   "description": "A fast and easy to use web based base64 encoder/decoder",
   "author": "Amir Mofasser",
   "license": "MIT",
-  "private": true,
-  "homepage": "http://amimof.github.io/base64",
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.3",
