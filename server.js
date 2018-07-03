@@ -74,7 +74,6 @@ var encodeParamData = function(req, res) {
 			timestamp: moment()
 		});
 	}).catch(function(error) {
-		console.log(error)
 		res.status(500).send(error);
 	});
 }
@@ -106,7 +105,6 @@ var decodeParamData = function(req, res) {
 };
 
 var decodePostData = function(req, res) {
-	console.log(req.body)
 	decode(req.body.data, req.query.encoding).then(function(d) {
 		res.json({
 			input: req.body.data,
@@ -115,7 +113,6 @@ var decodePostData = function(req, res) {
 			timestamp: moment()
 		});
 	}).catch(function(error) {
-		console.log(error)
 		res.status(500).send(error);
 	});
 }
@@ -163,4 +160,4 @@ app.use('/', static(path.join(__dirname, 'build'), {'index': ['index.html']}));
 app.use('/node_modules', static(path.join(__dirname, '../../node_modules')));
 
 app.listen(config.port, config.host);
-console.log(`Magic is happening on http://${config.host}:${config.port}/`);
+console.log(`Listening on http://${config.host}:${config.port}/`);
